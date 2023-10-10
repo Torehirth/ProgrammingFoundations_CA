@@ -1,3 +1,5 @@
+![Screenshot 2023-10-10 213234](https://github.com/NoroffFEU/programming-foundations-ca-Torehirth/assets/116200852/2aaeea8d-853c-42f6-9d3f-4484f5394bae)
+
 # Programming Foundations CA
 
 ## Car object
