@@ -5,14 +5,15 @@ const car = {
   },
   engine: {
     fuel: "diesel",
-    CC: 2000,
-    hk: 150,
+    cc: 2000,
+    hp: 150,
   },
   km: 200000,
   gearbox: "dsg",
   gears: [
     {
-      name: "park",
+      name: "reverse",
+      ratio: 3.88,
     },
     {
       name: "neutral",
@@ -20,27 +21,27 @@ const car = {
     },
     {
       name: "first",
-      ratio: 1.1,
+      ratio: 4.04,
     },
     {
       name: "second",
-      ratio: 1.2,
+      ratio: 2.37,
     },
     {
       name: "third",
-      ratio: 1.3,
+      ratio: 1.56,
     },
     {
       name: "fourth",
-      ratio: 1.4,
+      ratio: 1.16,
     },
     {
       name: "fifth",
-      ratio: 1.5,
+      ratio: 0.85,
     },
     {
       name: "sixth",
-      ratio: 1.6,
+      ratio: 0.76,
     },
   ],
   revs: 0,
