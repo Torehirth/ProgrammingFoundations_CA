@@ -6,30 +6,30 @@
 
 ### This object has the following properties:
 
-Type: This has nested object properties:
+**Type:** This has nested object properties:
 
 - Brand: Car manufacturer (string).
 - Model: Car model (string).
 
-Engine: This has nested object properties:
+**Engine:** This has nested object properties:
 
 - fuel: Type of fuel engine is running on (string).
 - CC: Size of motor volume in cubic centimeters (number).
 - HP: Power of engine in horse power (number).
 
-Km: Total kilometers car has traveled (number).
+**Km:** Total kilometers car has traveled (number).
 
-Gearbox: Type of gearbox (string).
+**Gearbox:** Type of gearbox (string).
 
-Gears: Arrays of objects regarding the gears:
+**Gears:** Arrays of objects regarding the gears:
 
 - Name: Name of gear (string).
 - Ratio: Gear ratio (number).
 
-Revs: Engine revolutions per minute, initially zero (number).
+**Revs:** Engine revolutions per minute, initially zero (number).
 
-Speed: Speed of car, initially zero (number).
+**Speed:** Speed of car, initially zero (number).
 
-On: Ignition of car, initially off (bolean).
+**On:** Ignition of car, initially off (bolean).
 
-function: This function determines if the cars engine is running or not.
+**Function:** This function determines if the cars engine is running or not.
