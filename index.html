@@ -1,17 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programming Foundations CA</title>
-    <link href='css/style.css' rel='stylesheet' />
-    <link rel='icon' href='data:;base64,=' />
-</head>
-
-<body>
-
-    <script src="js/car.js"></script>
-</body>
-
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="icon" href="data:;base64,=" />
+    <script defer src="js/car.js"></script>
+  </head>
+  <body>
+    <section>
+      <h1>My car</h1>
+    </section>
+    <section class="brandcontainer">
+      <h2 class="type" id="brand">brand</h2>
+      <h2 class="type" id="model">model</h2>
+    </section>
+    <section class="specscontainer">
+      <div>
+        <h3>Gears</h3>
+        <ul class="gearscontainer">
+          <li>current gear:</li>
+          <li>current gear ratio:</li>
+        </ul>
+      </div>
+      <div>
+        <h3>HUD</h3>
+        <ul class="enginespecscontainer">
+          <li>engine:</li>
+          <li>revs:</li>
+          <li>speed</li>
+          <li>km:</li>
+        </ul>
+      </div>
+    </section>
+    <div class="gearbtncontainer">
+      <button id="">1. gear</button>
+      <button id="">2. gear</button>
+      <button id="">3. gear</button>
+      <button id="">4. gear</button>
+      <button id="">5. gear</button>
+      <button id="">6. gear</button>
+      <button id="">revers</button>
+    </div>
+    <div class="ignitionbtncontainer">
+      <button class="ignitionbtn" id="ignitionbtn">Start</button>
+    </div>
+  </body>
 </html>

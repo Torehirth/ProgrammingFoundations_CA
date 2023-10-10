@@ -1,4 +1,122 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+
 body {
-	font-family: sans-serif;
-	padding: 1em 3em;
+  height: 100vh;
+  max-width: 100%;
+  background-image: url(../images/samuele-errico-piccarini-FMbWFDiVRPs-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  color: white;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Segoe UI", Tahoma, Verdana, sans-serif;
+  letter-spacing: 3px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2rem;
+  padding: 20px 0 40px 0;
+	color: goldenrod;
+}
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+li,
+p {
+  font-size: 1rem;
+}
+
+.brandcontainer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  gap: 200px;
+  color: aqua;
+  padding-bottom: 20px;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.2);
+  width: 500px;
+}
+
+.specscontainer {
+  display: flex;
+  justify-content: center;
+  gap: 300px;
+  padding-top: 20px;
+	color: lightgreen;
+
+}
+
+.enginespecscontainer,
+.gearscontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0 200px 0;
+  color: lightgreen;
+}
+
+.gearbtncontainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: fit-content;
+  margin-inline: auto;
+  padding-bottom: 40px;
+}
+
+.gearbtncontainer button {
+  padding: 12px 25px;
+  cursor: pointer;
+  font-weight: bold;
+  background-color: green;
+  color: whitesmoke;
+  box-shadow: greenyellow 1px 1px 4px;
+}
+
+.gearbtncontainer button:hover {
+  box-shadow: greenyellow 1px 1px 4px 2px;
+}
+
+.ignitionbtncontainer {
+  align-self: center;
+  padding-top: 50px;
+}
+.ignitionbtn {
+  padding: 50px 25px;
+  border-radius: 100%;
+  background-color: red;
+  color: white;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: greenyellow 0px 0px 5px 2px;
+  cursor: pointer;
+}
+.ignitionbtn:hover,
+.ignitionbtn:active {
+  box-shadow: greenyellow 0px 0px 5px 4px;
 }
