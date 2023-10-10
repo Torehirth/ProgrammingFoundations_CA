@@ -24,8 +24,10 @@ Gears: Arrays of objects regarding the gears:
 - Name: Name of gear (string).
 - Ratio: Gear ratio (number).
 
-Revs: Engine revolutions per minute (number).
+Revs: Engine revolutions per minute, initially zero (number).
 
-Speed: Speed of car (number).
+Speed: Speed of car, initially zero (number).
 
-On: Ignition of carv(bolean).
+On: Ignition of car, initially off (bolean).
+
+function: This function determines if the cars engine is running or not.
