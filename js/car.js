@@ -47,6 +47,19 @@ const car = {
   revs: 0,
   speed: 0,
   on: false,
-  // function
-  // ignition: function () {}
+  // function:
+  ignition: function () {
+    car.on = !car.on;
+  },
 };
+
+
+// Transfer brand and model to html.
+const brandHeadline = document.querySelector("#brand");
+const modelHeadline = document.querySelector("#model");
+
+brandHeadline.innerHTML = car.type.brand;
+modelHeadline.innerHTML = car.type.model;
+
+
+// Transfer gear and gear ratio to html when buttons on page is clicked.
