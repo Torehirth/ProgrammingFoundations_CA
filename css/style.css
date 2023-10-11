@@ -30,8 +30,8 @@ h3 {
 h1 {
   text-align: center;
   font-size: 2rem;
-  padding: 20px 0 40px 0;
-	color: goldenrod;
+  padding: 1rem 0 3rem 0;
+  color: goldenrod;
 }
 h2 {
   font-size: 1.5rem;
@@ -48,32 +48,67 @@ p {
 
 .brandcontainer {
   display: flex;
-  justify-content: center;
-  align-self: center;
-  gap: 200px;
+  justify-content: space-between;
+  gap: 1em;
   color: aqua;
-  padding-bottom: 20px;
+  padding-bottom: 1em;
   border-bottom: 1px solid;
   border-color: rgba(255, 255, 255, 0.2);
-  width: 500px;
+  margin-inline: auto;
 }
 
 .specscontainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 300px;
-  padding-top: 20px;
-	color: lightgreen;
-
+  gap: 4em;
+  padding-top: 1em;
+  color: lightgreen;
 }
 
-.enginespecscontainer,
+.specscontainer h3 {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
 .gearscontainer {
   display: flex;
+  justify-content: space-between;
+  gap: 4em;
+  margin: auto;
+  max-width: fit-content;
+}
+
+.enginespecscontainer {
+  display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 10px;
-  padding: 20px 0 200px 0;
   color: lightgreen;
+}
+
+.enginespecscontainer li {
+  display: flex;
+}
+
+.ignitionbtncontainer {
+  align-self: center;
+}
+.ignitionbtn {
+  padding: 32px 8px;
+  border-radius: 100%;
+  background-color: red;
+  color: aqua;
+  font-size: 1.25rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-weight: bold;
+  box-shadow: greenyellow 0px 0px 5px 2px;
+  cursor: pointer;
+}
+.ignitionbtn:hover,
+.ignitionbtn:active {
+  box-shadow: greenyellow 0px 0px 5px 4px;
 }
 
 .gearbtncontainer {
@@ -81,10 +116,10 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 1em;
   max-width: fit-content;
   margin-inline: auto;
-  padding-bottom: 40px;
+  padding-bottom: 0px;
 }
 
 .gearbtncontainer button {
@@ -98,25 +133,4 @@ p {
 
 .gearbtncontainer button:hover {
   box-shadow: greenyellow 1px 1px 4px 2px;
-}
-
-.ignitionbtncontainer {
-  align-self: center;
-  padding-top: 50px;
-}
-.ignitionbtn {
-  padding: 50px 25px;
-  border-radius: 100%;
-  background-color: red;
-  color: white;
-  font-size: 1.5rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  font-weight: bold;
-  box-shadow: greenyellow 0px 0px 5px 2px;
-  cursor: pointer;
-}
-.ignitionbtn:hover,
-.ignitionbtn:active {
-  box-shadow: greenyellow 0px 0px 5px 4px;
 }

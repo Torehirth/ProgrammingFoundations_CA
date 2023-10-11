@@ -17,7 +17,7 @@
 - CC: Size of motor volume in cubic centimeters (number).
 - HP: Power of engine in horse power (number).
 
-**Km:** Total kilometers car has traveled (number).
+**Odometer:** Total kilometers car has traveled (number).
 
 **Gearbox:** Type of gearbox (string).
 

@@ -8,7 +8,7 @@ const car = {
     cc: 2000,
     hp: 150,
   },
-  km: 200000,
+  odometer: 200000,
   gearbox: "dsg",
   gears: [
     {
@@ -53,7 +53,6 @@ const car = {
   },
 };
 
-
 // Transfer brand and model to html.
 const brandHeadline = document.querySelector("#brand");
 const modelHeadline = document.querySelector("#model");
@@ -61,5 +60,14 @@ const modelHeadline = document.querySelector("#model");
 brandHeadline.innerHTML = car.type.brand;
 modelHeadline.innerHTML = car.type.model;
 
-
 // Transfer gear and gear ratio to html when buttons on page is clicked.
+
+// Transfer Km to HUD in html.
+
+const odometer = document.querySelector("#km");
+odometer.innerHTML += " " + car.odometer + "<p>km</p>";
+
+// Transfer eninge specs to html.
+engineSpecs = document.querySelector("#engine");
+
+engineSpecs.innerHTML += " " + car.engine.cc + "<p>CC</p>" + " , " + car.engine.hp + "<p>Hp</p>" + " , " + car.engine.fuel;
