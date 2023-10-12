@@ -61,7 +61,7 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 5em;
+  gap: 5.5em;
   padding-top: 1em;
   color: lightgreen;
 }
