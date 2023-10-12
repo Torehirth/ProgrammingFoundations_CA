@@ -49,7 +49,7 @@ const car = {
   on: false,
   // function:
   ignition: function () {
-    car.on = !car.on;
+    this.on = !this.on;
   },
 };
 
@@ -62,12 +62,21 @@ modelHeadline.innerHTML = car.type.model;
 
 // Transfer gear and gear ratio to html when buttons on page is clicked.
 
-// Transfer Km to HUD in html.
+// Transfer object values to HUD in html.
+const engineSpecs = document.querySelector("#engine");
+
+engineSpecs.innerHTML += " " + car.engine.cc + "<p>CC</p>" + " , " + car.engine.hp + "<p>HP</p>" + " , " + car.engine.fuel;
+
+//inital values.
+const revolutions = document.querySelector("#revs");
+const speed = document.querySelector("#speed");
+
+revolutions.innerHTML += " " + car.revs + "<p>RPM</p>";
+speed.innerHTML += " " + car.speed + "<p>Km/h</p>";
 
 const odometer = document.querySelector("#km");
-odometer.innerHTML += " " + car.odometer + "<p>km</p>";
+odometer.innerHTML += " " + car.odometer + "<p>Km</p>";
 
-// Transfer eninge specs to html.
-engineSpecs = document.querySelector("#engine");
-
-engineSpecs.innerHTML += " " + car.engine.cc + "<p>CC</p>" + " , " + car.engine.hp + "<p>Hp</p>" + " , " + car.engine.fuel;
+// Transfer car ignition value to HUD.
+const carIgnition = document.querySelector("#ignition");
+carIgnition.innerHTML += " " + car.on;
