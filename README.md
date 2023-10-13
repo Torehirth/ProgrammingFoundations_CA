@@ -1,7 +1,8 @@
 <p align="center">
 <img src="./images/Screenshot_programming-foundations_page.png" alt="webpage screenshot">
 </p>
-**Link to page** https://norofffeu.github.io/programming-foundations-ca-Torehirth/
+
+### Link to page: https://norofffeu.github.io/programming-foundations-ca-Torehirth/
 
 # Programming Foundations CA
 
