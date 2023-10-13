@@ -103,14 +103,9 @@ function changeIgnitionStatus() {
 }
 
 function changeEngineRevs() {
-  if (car.on === true) {
+  if (car.on) {
     engineRevs.innerHTML = "Revs: 800RPM";
   } else {
     engineRevs.textContent = "Revs: 0RPM";
   }
 }
-
-// function startCar(car) {
-//   car.on = true;
-//   car.revs = 800;
-// }
