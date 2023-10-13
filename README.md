@@ -1,4 +1,4 @@
-![webpage screenshot](./images/Screenshot_programming-foundations_page.png)
+![webpage screenshot](./images/Screenshot_programming-foundations_page.png | height=572, width=480)
 
 **Link to page** https://norofffeu.github.io/programming-foundations-ca-Torehirth/
 
