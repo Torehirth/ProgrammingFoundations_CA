@@ -51,8 +51,16 @@ const car = {
   speed: 0,
   on: false,
   ignition: function () {
-    this.on = !this.on;
-    // This method/function inverts the bolean value of the object property "on".
+    if (this.on) {
+      this.on = false;
+    } else {
+      this.on = true;
+    }
+    // same as
+    // ignition: function () {
+    // this.on = !this.on;}
+
+    // This method/function inverts/toggle the bolean value of the object property "on".
     // Calling the function turns the ignition on when it's off and vice versa.
   },
 };
@@ -102,8 +110,8 @@ console.log("car travel: " + car.odometer + "km");
 // ------------------------------------------------------------------------------
 
 // "Start" button toggle function.
-// When "start" button is toggled the values of html elements below is simultaneous changed.  
- 
+// When "start" button is toggled the values of html elements below is simultaneous changed.
+
 // Elements in html sheet I want to change by toggle/clicking "start" button.
 const toggleIgnition = document.getElementById("ignitionbtn");
 const ignitionStatus = document.getElementById("ignitionstatus");
@@ -111,6 +119,7 @@ const engineRevs = document.getElementById("revs");
 
 console.log(typeof toggleIgnition);
 
+// Adding event listener "click" to the "start" button and calling the car ignition function to toggle it's ignition value, and the functions for updating the elements/displayed values on ingition status and revs simultaneous.
 toggleIgnition.addEventListener("click", function () {
   car.ignition();
   changeIgnitionStatus();
@@ -119,6 +128,7 @@ toggleIgnition.addEventListener("click", function () {
 
 function changeIgnitionStatus() {
   if (car.on === true) {
+    // same as (car.on).
     ignitionStatus.textContent = "Ignition ON";
     console.log("Ignition ON");
   } else {
@@ -129,6 +139,7 @@ function changeIgnitionStatus() {
 
 function changeEngineRevs() {
   if (car.on) {
+    // same as (car.on === true).
     engineRevs.innerHTML = "Revs: 800RPM";
   } else {
     engineRevs.textContent = "Revs: 0RPM";
