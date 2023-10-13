@@ -1,4 +1,4 @@
-<img src="./images/Screenshot_programming-foundations_page.png" alt="webpage screenshot" height="572" width="480" align-self="center">
+<img src="./images/Screenshot_programming-foundations_page.png" alt="webpage screenshot" height="572" width="480" background-position="center">
 
 **Link to page** https://norofffeu.github.io/programming-foundations-ca-Torehirth/
 
