@@ -78,5 +78,39 @@ const odometer = document.querySelector("#km");
 odometer.innerHTML += " " + car.odometer + "<p>Km</p>";
 
 // Transfer car ignition value to HUD.
-const carIgnition = document.querySelector("#ignition");
-carIgnition.innerHTML += " " + car.on;
+// const carIgnition = document.querySelector("#ignitionstatus");
+// carIgnition.innerHTML += " " + car.on;
+
+// Gear buttons onclick.
+// Ignition button function.
+
+const toggleIgnition = document.getElementById("ignitionbtn");
+const ignitionStatus = document.getElementById("ignitionstatus");
+const engineRevs = document.getElementById("revs");
+
+toggleIgnition.addEventListener("click", function () {
+  car.ignition();
+  changeIgnitionStatus();
+  changeEngineRevs();
+});
+
+function changeIgnitionStatus() {
+  if (car.on === true) {
+    ignitionStatus.textContent = "Ignition ON";
+  } else {
+    ignitionStatus.textContent = "Ignition OFF";
+  }
+}
+
+function changeEngineRevs() {
+  if (car.on === true) {
+    engineRevs.innerHTML = "Revs: 800RPM";
+  } else {
+    engineRevs.textContent = "Revs: 0RPM";
+  }
+}
+
+// function startCar(car) {
+//   car.on = true;
+//   car.revs = 800;
+// }
