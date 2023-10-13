@@ -2,7 +2,9 @@
 <img src="./images/Screenshot_programming-foundations_page.png" alt="webpage screenshot">
 </p>
 
-### Link to page: https://norofffeu.github.io/programming-foundations-ca-Torehirth/
+**Link** **to** **page:**
+
+### https://norofffeu.github.io/programming-foundations-ca-Torehirth/
 
 # Programming Foundations CA
 
@@ -38,4 +40,4 @@
 
 **Function:** This method/function determines if the cars engine is running or not, based in the "on" property.
 
-I've also added functions for a start button that changes some elements on the page, and and buttons for shifting gears that changes the gear and gear ratio on the page.
+I've also added functions for a start button that changes some elements on the page, and buttons for shifting gears that changes the gear and gear ratio on the page.
