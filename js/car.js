@@ -78,8 +78,6 @@ console.log("ignition status: " + car.on); //false
 
 // -------------------------------------------------------------------------------
 
-// Transfer different property values to html sheet.
-
 // Transfering brand and model to html.
 const brandHeadline = document.querySelector("#brand");
 const modelHeadline = document.querySelector("#model");
