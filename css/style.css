@@ -79,8 +79,9 @@ hr {
 .gearscontainer {
   display: flex;
   justify-content: space-between;
-  gap: 4em;
+  gap: 2em;
   margin: auto;
+  padding-inline: 20px;
   max-width: fit-content;
 }
 

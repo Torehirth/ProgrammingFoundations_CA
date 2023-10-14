@@ -15,12 +15,16 @@ const car = {
   gearbox: "dsg",
   gears: [
     {
+      name: "park",
+      ratio: NaN,
+    },
+    {
       name: "reverse",
       ratio: 3.88,
     },
     {
       name: "neutral",
-      ratio: 0,
+      ratio: NaN,
     },
     {
       name: "first",
@@ -151,3 +155,75 @@ console.log(typeof car.ignition);
 //--------------------------------------------------------------------------------
 
 // Transfering gear and gear ratio to html when buttons on page is clicked.
+
+const currentGear = document.getElementById("currentgear");
+const gearRatio = document.getElementById("gearratio");
+
+function changeGear(i) {
+  const gear = car.gears[i];
+
+  if (car.on && i >= 0 && i < car.gears.length) {
+    currentGear.textContent = "Current Gear: " + gear.name;
+    gearRatio.textContent = "Gear Ratio: " + gear.ratio;
+
+    console.log("Current gear: " + gear.name);
+    console.log("Current gear ratio: " + gear.ratio);
+  } else {
+    if (car.on === false) {
+      console.log("car is not running");
+      alert("car is NOT running!");
+    }
+    if (i <= 0 || i >= car.gears.length) {
+      console.log("invalid gear");
+    }
+  }
+}
+
+const parkButton = document.getElementById("park");
+parkButton.addEventListener("click", function () {
+  changeGear(0);
+});
+
+const reversButton = document.getElementById("revers");
+reversButton.addEventListener("click", function () {
+  changeGear(1);
+});
+
+const neutralButton = document.getElementById("neutral");
+neutralButton.addEventListener("click", function () {
+  changeGear(2);
+});
+
+const gear1Button = document.getElementById("gear1");
+gear1Button.addEventListener("click", function () {
+  changeGear(3);
+});
+
+const gear2Button = document.getElementById("gear2");
+gear2Button.addEventListener("click", function () {
+  changeGear(4);
+});
+
+const gear3Button = document.getElementById("gear3");
+gear3Button.addEventListener("click", function () {
+  changeGear(5);
+});
+
+const gear4Button = document.getElementById("gear4");
+gear4Button.addEventListener("click", function () {
+  changeGear(6);
+});
+
+const gear5Button = document.getElementById("gear5");
+gear5Button.addEventListener("click", function () {
+  changeGear(7);
+});
+
+const gear6Button = document.getElementById("gear6");
+gear6Button.addEventListener("click", function () {
+  changeGear(8);
+});
+
+// Transfer/displaying "park" gear values on page as text.
+currentGear.innerHTML += " " + car.gears[0].name;
+gearRatio.textContent = "Gear Ratio: " + car.gears[0].ratio;
