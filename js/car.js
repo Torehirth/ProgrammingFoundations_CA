@@ -112,7 +112,7 @@ console.log("car travel: " + car.odometer + "km");
 // ------------------------------------------------------------------------------
 
 // "Start" button toggle function.
-// When "start" button is toggled the values of html elements below is simultaneous changed.
+// When "start" button is toggled the values/text in the html id's below is simultaneous changed.
 
 // Elements in html sheet I want to change by toggle/clicking "start" button.
 const toggleIgnition = document.getElementById("ignitionbtn");
@@ -152,32 +152,39 @@ console.log(typeof car.ignition);
 
 //--------------------------------------------------------------------------------
 
-// Transfering gear and gear ratio to html when buttons on page is clicked.
+// Displaying gear and gear ratio in html when gear-buttons on page is clicked.
 
-const currentGear = document.getElementById("currentgear");
-const gearRatio = document.getElementById("gearratio");
+const currentGear = document.getElementById("currentgear"); // Selecting html elements by id and storing them in variabels, this element is used to display the current gear.
+const gearRatio = document.getElementById("gearratio"); // Selecting html elements by id and storing them in variabels, this element is used to display the current gear ratio.
 
+// Out of the gears array were making a function for changing gears, with the parameter "i" that represents the selected gear.
 function changeGear(i) {
-  const gear = car.gears[i];
+  const gear = car.gears[i]; // making a variabel called gear out of the car object and the gears array, storing the selected gear (index "i").
 
   if (car.on && i >= 0 && i < car.gears.length) {
     currentGear.textContent = "Current Gear: " + gear.name;
     gearRatio.textContent = "Gear Ratio: " + gear.ratio;
+    // if object car and property on is true(car.on === true;), and "i" is bigger or equal to 0, and "i" is less than the length of gears array. It will update the content displayed in html using the currentGear and gearRatio variabel.
 
     console.log("Current gear: " + gear.name);
     console.log("Current gear ratio: " + gear.ratio);
+    // Logs the current gear and gear ratio to the console.
   } else {
     if (car.on === false) {
-      console.log("car is not running");
-      alert("car is NOT running!");
+      console.log("car is not running"); // if the car is not running(car.on === false;) this logs the message "car is not running" to the console.
+      alert("car is NOT running!"); // if the car is not running(car.on === false;) this sends an alert(pop-up) with the message "car is not running" to the console.
     }
     if (i <= 0 || i >= car.gears.length) {
       console.log("invalid gear");
+      // if these requirements is not met it will log the message "invalid gear" to the console.
     }
   }
 }
 
+// Selecting the buttons for the specific gear by id and storing this as a variabel.
 const parkButton = document.getElementById("park");
+
+// adding an event listener to each button that responds to a click, and when the button is clicked it's calling the function "changeGear" with the index of the gear and gear ratio it represents(index: 0-8, the first gear in the array is 0).
 parkButton.addEventListener("click", function () {
   changeGear(0);
 });
@@ -222,6 +229,6 @@ gear6Button.addEventListener("click", function () {
   changeGear(8);
 });
 
-// Transfer/displaying "park" gear values on page as text.
+// Displaying "park" gear values on page as text when car is off("start" button is not clicked).
 currentGear.innerHTML += " " + car.gears[0].name;
 gearRatio.textContent = "Gear Ratio: " + car.gears[0].ratio;

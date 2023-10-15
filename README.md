@@ -8,7 +8,11 @@
 
 ### https://norofffeu.github.io/programming-foundations-ca-Torehirth/
 
-## Car object
+## Car object 🚗
+
+From my daily life I chose my car as an object, because I'm using this everyday.
+
+---
 
 ### This object has the following properties and values:
 
@@ -40,4 +44,6 @@
 
 **Function:** This method/function determines if the cars engine is running or not, based in the "on" property.
 
-I've also added functions for a start button toggle that changes some text/value on some elements on the page by clicking it, and buttons for shifting gears that changes the gear value and gear ratio value on the page.
+I've added a function for a start button(toggle) that displays some of the values in the object in the html elements, this will update by clicking the start button.
+
+I've also added buttons for shifting gears that displays the gear value and gear ratio value in the html with the respective gear, this will be updated by clicking the different gear-buttons.
