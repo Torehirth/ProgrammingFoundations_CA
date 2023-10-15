@@ -8,11 +8,11 @@
 
 ### https://norofffeu.github.io/programming-foundations-ca-Torehirth/
 
+---
+
 ## Car object 🚗
 
 From my daily life I chose my car as an object, because I'm using this everyday.
-
----
 
 ### This object has the following properties and values:
 
@@ -43,6 +43,10 @@ From my daily life I chose my car as an object, because I'm using this everyday.
 **On:** Ignition of car, initial value of false (bolean value).
 
 **Function:** This method/function determines if the cars engine is running or not, based in the "on" property.
+
+---
+
+### Additional feautures
 
 I've added a function for a start button(toggle) that displays some of the values in the object in the html elements, this will update by clicking the start button.
 
