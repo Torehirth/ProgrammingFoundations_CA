@@ -1,8 +1,9 @@
+# Programming Foundations CA
+Course assignment in Programming Foundations.
+
 <p align="center">
 <img src="./images/Screenshot_programming-foundations_page.png" alt="webpage screenshot">
 </p>
-
-# Programming Foundations CA
 
 **Link** **to** **page:**
 
