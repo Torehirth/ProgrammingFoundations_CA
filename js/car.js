@@ -79,35 +79,37 @@ console.log("ignition status: " + car.on); //false
 // -------------------------------------------------------------------------------
 
 // Transfering brand and model to html.
+
 const brandHeadline = document.querySelector("#brand");
 const modelHeadline = document.querySelector("#model");
 
 brandHeadline.innerHTML = car.type.brand;
 modelHeadline.innerHTML = car.type.model;
 
-console.log("Car brand and model: " + car.type.brand, car.type.model);
+console.log(`Car brand and model: ${car.type.brand} ${car.type.model}`); // written in template literals.
 
 // Transfer object values to HUD in html.
 const engineSpecs = document.querySelector("#engine");
 
-engineSpecs.innerHTML += " " + car.engine.cc + "<p>CC</p>" + " , " + car.engine.hp + "<p>HP</p>" + " , " + car.engine.fuel;
+engineSpecs.innerHTML += ` ${car.engine.cc} CC, ${car.engine.hp} HP, ${car.engine.fuel}`;
+// written in template literals.
 
-console.log("Engine property values: " + car.engine.cc, car.engine.hp, car.engine.fuel);
-console.log("Engine fuel value type: " + typeof car.engine.fuel);
+console.log(`Engine property values: ${car.engine.cc} CC, ${car.engine.hp} HP, ${car.engine.fuel}`);
+console.log(`Engine fuel value type: ${typeof car.engine.fuel}`);
 
 //inital values.
 const revolutions = document.querySelector("#revs");
 const speed = document.querySelector("#speed");
 
-revolutions.innerHTML += " " + car.revs + "<p>RPM</p>";
-speed.innerHTML += " " + car.speed + "<p>Km/h</p>";
+revolutions.innerHTML += ` ${car.revs} RPM`;
+speed.innerHTML += ` ${car.speed} Km/h`;
 
-console.log("engine revs: " + car.revs);
+console.log(`engine revs: ${car.revs} RPM`);
 
 const odometer = document.querySelector("#km");
-odometer.innerHTML += " " + car.odometer + "<p>Km</p>";
+odometer.innerHTML += ` ${car.odometer} Km`;
 
-console.log("car travel: " + car.odometer + "km");
+console.log(`car travel: ${car.odometer} Km`);
 
 // ------------------------------------------------------------------------------
 
@@ -162,12 +164,12 @@ function changeGear(i) {
   const gear = car.gears[i]; // making a variabel called gear out of the car object and the gears array, storing the selected gear (index "i").
 
   if (car.on && i >= 0 && i < car.gears.length) {
-    currentGear.textContent = "Current Gear: " + gear.name;
-    gearRatio.textContent = "Gear Ratio: " + gear.ratio;
+    currentGear.textContent = `Current Gear: ${gear.name}`;
+    gearRatio.textContent = `Gear Ratio: ${gear.ratio}`;
     // if object car and property on is true(car.on === true;), and "i" is bigger or equal to 0, and "i" is less than the length of gears array. It will update the content displayed in html using the currentGear and gearRatio variabel.
 
-    console.log("Current gear: " + gear.name);
-    console.log("Current gear ratio: " + gear.ratio);
+    console.log(`Current gear: ${gear.name}`);
+    console.log(`Current gear ratio: ${gear.ratio}`);
     // Logs the current gear and gear ratio to the console.
   } else {
     if (car.on === false) {
@@ -230,5 +232,5 @@ gear6Button.addEventListener("click", function () {
 });
 
 // Displaying "park" gear values on page as text when car is off("start" button is not clicked).
-currentGear.innerHTML += " " + car.gears[0].name;
-gearRatio.textContent = "Gear Ratio: " + car.gears[0].ratio;
+currentGear.innerHTML += ` ${car.gears[0].name}`;
+gearRatio.textContent = ` Gear Ratio: ${car.gears[0].ratio}`;
