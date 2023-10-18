@@ -69,12 +69,12 @@ const car = {
   },
 };
 
-// Calling the ignition function to change the bolean value of the "on" property of the "car" object.
+// Calling the ignition function to change the boolean value of the "on" property of the "car" object.
 // Below is an example that calling the function shifts the bolean value(view in console).
 car.ignition();
 console.log("ignition status: " + car.on); //true
 car.ignition();
-console.log("ignition status: " + car.on); //false
+console.log(`ignition status: ${car.on}`); //false
 
 // -------------------------------------------------------------------------------
 
@@ -136,6 +136,7 @@ function changeIgnitionStatus() {
     ignitionStatus.textContent = "Ignition ON";
     console.log("Ignition ON");
   } else {
+    // (car.on === false) or (!car.on);
     ignitionStatus.textContent = "Ignition OFF";
     console.log("Ignition OFF");
   }
